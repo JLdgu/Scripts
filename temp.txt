@@ -1,0 +1,12 @@
+Natalie Keens
+
+
+Is it possible to use await Task.Run( () => ...) in a partial void method (from Community toolkit).
+I am tring to figure out how to make OnSearchUserChanged more responsive. 
+https://github.com/JLdgu/PhoneAssistant/blob/main/PhoneAssistant.WPF/Features/Users/UsersMainViewModel.cs
+Complier doesn't like partial async void
+
+07989215733 on 8944125605569173989 not 8944125605547497054
+
+Full bar off in progress?
+07970251045 8944125605542649659
