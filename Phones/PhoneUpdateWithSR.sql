@@ -1,9 +1,9 @@
 .mode box
 .param init
 
-.param set $AssetTag MP00105
-.param set $SR 9999
-.param set $User "Abbey Turner"
+.param set $AssetTag MP00
+.param set $SR 22
+.param set $User ""
 
 SELECT IMEI, PhoneNumber, Status, SRNumber, NewUser, Notes, AssetTag
 FROM Phones WHERE AssetTag = $AssetTag;
