@@ -2,23 +2,25 @@ param (
     [string]$SqlScript
 )
 switch ($SqlScript.ToLower()) {
-    "ifr" {$script = Get-ScriptPath "Phones" "ifixerRepair.sql"; break }
-    "e2n" {$script = Get-ScriptPath "Phones" "PhoneEmptyToNull.sql"; break }
-    "nns" {$script = Get-ScriptPath "Phones" "PhoneNewNoSIM.sql"; break }
-    "nws" {$script = Get-ScriptPath "Phones" "PhoneNewWithSIM.sql"; break }
-    "rs" {$script = Get-ScriptPath "Phones" "PhoneRemoveSIM.sql"; break }
-    "uws" {$script = Get-ScriptPath "Phones" "PhoneUpdateWithSR.sql"; break }
+    "pe2n" {$script = Get-ScriptPath "Phones" "PhoneEmptyToNull.sql"; break }
+    "pifr" {$script = Get-ScriptPath "Phones" "ifixerRepair.sql"; break }
+    "pis" {$script = Get-ScriptPath "Phones" "PhoneInStock.sql"; break }
+    "pnns" {$script = Get-ScriptPath "Phones" "PhoneNewNoSIM.sql"; break }
+    "pnws" {$script = Get-ScriptPath "Phones" "PhoneNewWithSIM.sql"; break }
+    "prs" {$script = Get-ScriptPath "Phones" "PhoneRemoveSIM.sql"; break }
+    "puws" {$script = Get-ScriptPath "Phones" "PhoneUpdateWithSR.sql"; break }
     "smtp" {$script = Get-ScriptPath "Sims" "SimMovetoPhone.sql"; break }
     "sn" {$script = Get-ScriptPath "Sims" "SimNew.sql"; break }
     
 Default {
         Write-Host "Script choice not found - valid scripts are" -ForegroundColor Red;     
-        Write-Host "ifr - ifixerRepair"
-        Write-Host "e2n - PhoneEmptyToNull"
-        Write-Host "nns - PhoneNewNoSIM"
-        Write-Host "nws - PhoneNewWithSIM"
-        Write-Host "rs - PhoneRemoveSIM"
-        Write-Host "uws - PhoneUpdateWithSR"
+        Write-Host "pe2n - PhoneEmptyToNull"
+        Write-Host "pifr - ifixerRepair"
+        Write-Host "pis - PhoneInStock"
+        Write-Host "pnns - PhoneNewNoSIM"
+        Write-Host "pnws - PhoneNewWithSIM"
+        Write-Host "prs - PhoneRemoveSIM"
+        Write-Host "puws - PhoneUpdateWithSR"
         Write-Host "smtp - SimMovetoPhone"
         Write-Host "sn - SimNew"
         return}
