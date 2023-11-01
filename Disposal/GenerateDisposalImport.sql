@@ -8,9 +8,7 @@
 .mode csv
 -- Phones which have not been set to decommissioned on myScomis
 -- use file to create a Decommissioned import
-
-.output "SR204153 Missed Decommissioned Import.csv"
---.output :missed
+.output "SR204153 Missed Decommissioned Phones Import.csv"
 .print "Name,User,Status,Serial Number,Location,Owner,CI Notes,Service Request"
 SELECT Name, '' as User, 
     'Decommissioned' as Status,
@@ -24,7 +22,7 @@ WHERE p.[CI Status] <> 'Decommissioned';
 
 -- All phones which have been disposed of by SCC
 -- use file to create a Disposed import
-.output "SR204153 Disposed Import.csv"
+.output "SR204153 Disposed Phones Import.csv"
 .print "Name,User,Status,Serial Number,Location,Owner,CI Notes,Service Request"
 SELECT Name, '' as User, 
     'Disposed' as Status,
