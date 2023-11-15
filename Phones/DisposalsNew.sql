@@ -1,16 +1,16 @@
 INSERT INTO Disposals (
-    Status, 
+    SRNumber,
     IMEI, 
     FormerUser, 
     OEM, 
-    AssetTag,
-    SerialNumber
+    Status, 
+    AssetTag
 )
 VALUES (
+    271878,
+    '',  -- IMEI
+    '',       -- Former User
+    'Sony',             -- OEM
     'Decommissioned',
-    '012926007062567',     -- IMEI
-    ?,      -- Former User
-    'iPad',     -- OEM
-    ?,
-    'DLXH57GSDFJ1'
-);
+    ?);
+.exit 1

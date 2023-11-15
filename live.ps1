@@ -2,6 +2,7 @@ param (
     [string]$SqlScript
 )
 switch ($SqlScript.ToLower()) {
+    "pdn" {$script = Get-ScriptPath "Phones" "DisposalsNew.sql"; break }
     "pe2n" {$script = Get-ScriptPath "Phones" "PhoneEmptyToNull.sql"; break }
     "pifr" {$script = Get-ScriptPath "Phones" "ifixerRepair.sql"; break }
     "pis" {$script = Get-ScriptPath "Phones" "PhoneInStock.sql"; break }
