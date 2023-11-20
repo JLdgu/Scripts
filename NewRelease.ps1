@@ -1,6 +1,13 @@
+$newRelease = "P:\ICTS\Mobile Phones\PhoneAssistant\Application\v0.3.11.200"
 
-Copy-Item -Path "c:\dev\PhoneAssistant\Publish" -Destination "P:\ICTS\Mobile Phones\PhoneAssistant\Application\v0.3.9.290" -Recurse
+If (Test-Path -Path $newRelease) {
+  Write-Host "Release alread exists"
+  Exit
+}
 
-Copy-Item -Path "P:\ICTS\Mobile Phones\PhoneAssistant\Application\v0.3.9.290\*" -Destination "$ENV:UserProfile\AppData\Local\PhoneAssistant"
+Copy-Item -Path "c:\dev\PhoneAssistant\Publish" -Destination $newRelease -Recurse
+
+$newRelease = $newRelease + "\*"
+Copy-Item -Path $newRelease -Destination "$ENV:UserProfile\AppData\Local\PhoneAssistant"
 
 # Copy-Item -Path "c:\dev\PhoneAssistant\Publish\*" -Destination "$ENV:UserProfile\AppData\Local\PhoneAssistant"
