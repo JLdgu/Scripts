@@ -3,11 +3,11 @@ INSERT INTO Phones
     VALUES (
     '',			-- IMEI
     '',			            -- Former User
-    '',						-- NorR, N(ew) or R(epurposed)
-    'R',				    -- Status
+    'R',						-- NorR, N(ew) or R(epurposed)
+    'In Stock',				    -- Status
     'Samsung',					-- OEM
     'A32',                      -- Model
-    null);
+    '' );
 
 SELECT changes(), total_changes();
 .exit 1
