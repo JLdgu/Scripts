@@ -8,10 +8,10 @@ FROM Phones WHERE AssetTag = $AssetTag;
 
 UPDATE Phones
 SET FormerUser=NewUser,
-    [Status]='In Stock',
+    Status='In Stock',
     SRNumber=?,
     Newuser=?,
-    "Notes"=?
+    Notes=?
 WHERE AssetTag = $AssetTag;
 
 SELECT IMEI, PhoneNumber, FormerUser, Status, SRNumber, NewUser, Notes, AssetTag
