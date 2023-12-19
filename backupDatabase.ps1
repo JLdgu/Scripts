@@ -8,7 +8,7 @@ $db = "PhoneAssistant.db"
 $backupDir = "Backup"
 $backupDb = "PhoneAssistant$backupDate.db"
 
-$livePath = "p:/ICTS/Mobile Phones/PhoneAssistant"
+$livePath = "K:/FITProject/ICTS/Mobile Phones/PhoneAssistant"
 $testPath =  "c:/temp" 
 
 if ($test){
