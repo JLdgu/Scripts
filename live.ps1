@@ -10,11 +10,13 @@ switch ($SqlScript.ToLower()) {
     "pnws" {$script = Get-ScriptPath "Phones" "PhoneNewWithSIM.sql"; break }
     "prs" {$script = Get-ScriptPath "Phones" "PhoneRemoveSIM.sql"; break }
     "puws" {$script = Get-ScriptPath "Phones" "PhoneUpdateWithSR.sql"; break }
+    "sfbr" {$script = Get-ScriptPath "Sims" "SimFromBaseReport.sql"; break }
     "smtp" {$script = Get-ScriptPath "Sims" "SimMovetoPhone.sql"; break }
     "sn" {$script = Get-ScriptPath "Sims" "SimNew.sql"; break }
     
 Default {
         Write-Host "Script choice not found - valid scripts are" -ForegroundColor Red;     
+        Write-Host "pdn - DisposalsNew"
         Write-Host "pe2n - PhoneEmptyToNull"
         Write-Host "pifr - ifixerRepair"
         Write-Host "pis - PhoneInStock"
@@ -22,6 +24,7 @@ Default {
         Write-Host "pnws - PhoneNewWithSIM"
         Write-Host "prs - PhoneRemoveSIM"
         Write-Host "puws - PhoneUpdateWithSR"
+        Write-Host "sfbr - SimFromBaseReport"
         Write-Host "smtp - SimMovetoPhone"
         Write-Host "sn - SimNew"
         return}
