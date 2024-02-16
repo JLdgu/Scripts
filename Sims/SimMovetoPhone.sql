@@ -1,11 +1,8 @@
 .mode box
 .param init
 
-.param set $AssetTag "MP00469"
-.param set $Phone "'07976983271'"
-
-SELECT IMEI, PhoneNumber, Status, SRNumber, NewUser, Notes, AssetTag
-FROM Phones WHERE AssetTag = $AssetTag;
+.param set $AssetTag ""
+.param set $Phone "''"
 
 UPDATE Phones
 SET PhoneNumber = sim.PhoneNumber,
