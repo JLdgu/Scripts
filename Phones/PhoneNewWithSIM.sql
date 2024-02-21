@@ -12,5 +12,8 @@ INSERT INTO Phones
     '',					-- Asset Tag
     NULL);
 
-SELECT changes(), total_changes();
+.mode box
+SELECT IMEI, PhoneNumber, FormerUser, NorR, Status, AssetTag FROM Phones
+WHERE LastUpdate > CURRENT_DATE
+ORDER BY AssetTag DESC;
 .exit 1
