@@ -7,5 +7,7 @@ VALUES (
 ?
 );
 
-SELECT changes(), total_changes();
+.mode box
+SELECT PhoneNumber, SimNumber, Status FROM SIMs
+WHERE LastUpdate > CURRENT_DATE;
 .exit 1
