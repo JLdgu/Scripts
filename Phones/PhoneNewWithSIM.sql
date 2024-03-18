@@ -15,5 +15,5 @@ INSERT INTO Phones
 .mode box
 SELECT IMEI, PhoneNumber, FormerUser, NorR, Status, AssetTag FROM Phones
 WHERE LastUpdate > CURRENT_DATE
-ORDER BY AssetTag DESC LIMIT 2;
+ORDER BY LastUpdate DESC LIMIT 2;
 .exit 1
