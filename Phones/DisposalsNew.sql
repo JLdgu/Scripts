@@ -19,7 +19,7 @@ VALUES (
     'R');
 
 .mode box
-SELECT IMEI, PhoneNumber, FormerUser, NorR, Status, AssetTag FROM Phones
+SELECT IMEI, PhoneNumber, FormerUser, NorR, Status, Model, AssetTag FROM Phones
 WHERE LastUpdate > CURRENT_DATE
 ORDER BY LastUpdate DESC LIMIT 2;
 .exit 1
