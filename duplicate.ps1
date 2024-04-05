@@ -1,5 +1,5 @@
 param (
-    [string]$db = "live"
+    [string]$db = "test"
 )
 
 $script = "duplicate.sql"
